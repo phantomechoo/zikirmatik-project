@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasbeehly</title>
+    <link href="https://fonts.googleapis.com/css2?family=Beau+Rivage&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Inline+One:ital@0;1&family=Alumni+Sans+Pinstripe:ital@0;1&family=Amatic+SC:wght@400;700&family=Anton&family=Ballet:opsz@16..72&family=Bitcount+Prop+Single:wght@100..900&family=Bitcount+Single:wght@100..900&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Caveat:wght@400..700&family=Dosis:wght@200..800&family=Edu+QLD+Hand:wght@400..700&family=Fascinate&family=Italiana&family=Jersey+10&family=League+Script&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lobster&family=Mea+Culpa&family=Monsieur+La+Doulaise&family=MonteCarlo&family=Nanum+Myeongjo&family=Patrick+Hand&family=Pixelify+Sans:wght@400..700&family=Playpen+Sans:wght@100..800&family=Poiret+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Sail&family=Sirivennela&display=swap" rel="stylesheet">
+
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#2F2E41">
+
+</head>
+<style>
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2F2E41;
+}
+#container {
+    width: 400px;
+    height: 850px;
+    background-color: #2F2E41;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.text1 {
+    text-align: center;
+    color: white;
+    font-family: 'Beau Rivage', cursive;
+    font-weight: 100;
+    font-size: 40px;
+}
+
+.text2 {
+    font-family: "Alumni Sans Pinstripe", sans-serif;
+    color: white;
+    font-size: 40px;
+    font-weight: 100;
+    text-align: center;
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+    padding: 15px;
+    opacity: 0.7;
+    margin-top: 12%;
+}
+
+.resim {
+    width: 374px;
+    height: 211px;
+    margin-top: 18px;
+}
+
+#btn {
+    width: 270px;
+    height: 61px;
+    font-family: "Alumni Sans Pinstripe", sans-serif;
+    font-weight: 100;
+    font-size: 30px;
+    border-radius: 17px;
+    position: absolute;
+    bottom: 12%;
+    left: 16.5%;
+    transform: translateX((-50%));
+    border: #2F2E41;
+    transition: background-color 0.3s ease;
+}
+
+#btn:hover, #basla:hover {
+    background-color: rgb(235, 218, 255);
+    transform: scale(1.1);
+    transition: 0.3s ease-in-out;
+}
+
+#basla {
+    width: 270px;
+    height: 61px;
+    font-family: "Alumni Sans Pinstripe", sans-serif;
+    font-weight: 100;
+    font-size: 30px;
+    border-radius: 17px;
+    position: absolute;
+    bottom: 12%;
+    left: 16.5%;
+    transform: translateX((-50%));
+    border: #2F2E41;
+    transition: background-color 0.3s ease;
+}
+
+#ekleBtn {
+    width: 150px;
+    height: 50px;
+    font-family: "Alumni Sans Pinstripe", sans-serif;
+    font-weight: 100;
+    font-size: 30px;
+    border-radius: 17px;
+    position: absolute;
+    bottom: 25%;
+    left: 30%;
+    transform: translateX((-50%));
+    border: #2F2E41;
+    transition: background-color 0.3s ease;
+}
+
+#ekleBtn:hover {
+    background-color: rgb(235, 218, 255);
+}
+
+#step2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.text3 {
+    font-family: "Alumni Sans Pinstripe", sans-serif;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    font-weight: 100;
+}
+
+#step2 select,
+#step2 input {
+  width: 250px;
+  padding: 8px;
+  margin-top: 8px;
+  font-family: "Alumni Sans Pinstripe", sans-serif;
+  font-size: 25px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+label {
+    font-family: "Alumni Sans Pinstripe", sans-serif;
+    color: white;
+    font-size: 25px;
+}
+
+
+.text4 {
+  font-size: 30px;
+  text-align: center;
+}
+
+#liste {
+  font-family: "Alumni Sans Pinstripe", sans-serif;
+  color: white;
+  font-size: 25px;
+}
+
+#arttir {
+    width: 250px;
+    height: 250px;
+    font-family: "Alumni Sans Pinstripe", sans-serif;
+    font-weight: 100;
+    font-size: 60px;
+    border-radius: 50%;
+    margin-top: 15%;
+    margin-bottom: 10%;
+    margin-left: 8.2%;
+    border: #2F2E41;
+    transition: background-color 0.3s ease;
+}
+
+#arttir:hover {
+  background-color: rgb(235, 218, 255);
+  transform: scale(1.1);
+  transition: 0.3s ease-in-out;
+}
+
+#step3 {
+  font-family: "Alumni Sans Pinstripe", sans-serif;
+  color: white;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+  gap: 10px;
+  
+}
+
+
+
+#step3 .goals {
+  margin-top: 20%;
+}
+
+
+</style>
+<body>
+<div id="container">
+    
+    <div id="step1" class="step active" >
+        <h1 class="text1">Tasbeehly</h1>
+        <img src="./resim.svg" class="resim">
+        <h2 class="text2">Hoş geldin. Bugün gönlünü zikrin nuruyla aydınlatmaya var mısın?</h2>
+        <button id="btn">Bismillah</button>
+    </div>
+    
+    
+    <div id="step2" class="step" style="display: none;">
+         <h1 class="text1">Tasbeehly</h1>
+    <div>
+        <h3 class="text3">Bugün hangi zikirleri çekmek istersin?</h3>
+
+    <!-- Kategori -->
+    <label for="zikirKategori">Kategori Seç:</label><br>
+    <select id="zikirKategori">
+      <option value="">-- Kategori Seç --</option>
+      <option value="salavat">Salavat</option>
+      <option value="tesbihat">Tesbihat</option>
+      <option value="esma">Esmaü’l Hüsna</option>
+      <option value="sure">Sureler</option>
+      <option value="dua">Dualar</option>
+    </select>
+    <br><br>
+
+    <!-- Zikir -->
+    <label for="zikirSec">Zikir Seç:</label><br>
+    <select id="zikirSec">
+      <option value="">-- Önce kategori seç --</option>
+    </select>
+    <br><br>
+
+    <!-- Hedef -->
+    <label for="hedef">Hedef:</label><br>
+    <input type="number" id="hedef" placeholder="örn. 1000">
+    <br><br>
+
+    <!-- Buton -->
+    <button id="basla">Başla</button>
+    <button id="ekleBtn">Ekle</button>
+    
+  </div>
+</div>
+
+<div id="step3" class="step" style="display: none;">
+  <h1 class="text1">Tasbeehly</h1>
+
+  
+  <button id="arttir">0</button>
+
+  <div class="goals">
+    <h3 class="text4">Bugünkü Hedeflerim:</h3>
+    <ul id="liste"></ul>
+  </div>
+</div>
+
+</div>
+    
+<script>
+    const step1 = document.getElementById("step1");
+    const step2 = document.getElementById("step2");
+    const step3 = document.getElementById("step3");
+
+    document.querySelector("#btn").addEventListener("click", () => {
+        step1.classList.remove("active");
+        step1.style.display = "none";
+        step2.classList.add("active");
+        step2.style.display = "block"
+    })
+
+  // Zikir kategorileri
+    const zikirler = {
+      salavat: ["Allahümme salli ala seyyidina Muhammedin ve ala ali seyyidina Muhammed"],
+      tesbihat: [
+        "Subhanallah",
+        "Elhamdülillah",
+        "Allahu Ekber",
+        "La ilahe illallah",
+        "La havle ve la kuvvete illa billah"
+      ],
+      esma: ["Ya Rahman", "Ya Şafi", "Ya Rezzak", "Ya Latif", "Ya Vedud", "Ya Nur"],
+      sure: ["Fatiha", "İhlas", "Felak", "Nas", "Ayetel Kürsi"],
+      dua: [
+        "Estağfirullah",
+        "Hasbiyallahu la ilahe illa Hu",
+        "Bismillahirrahmanirrahim",
+        "Sübhanallahi ve bihamdihi Sübhanallahil azim"
+      ]
+    };
+
+    const kategoriSelect = document.getElementById("zikirKategori");
+    const zikirSelect = document.getElementById("zikirSec");
+    const hedefInput = document.getElementById("hedef");
+    const ekleBtn = document.getElementById("ekleBtn");
+    const liste = document.getElementById("liste");
+    const arttir = document.getElementById("arttir");
+    
+
+    // Kategori seçilince zikiri doldur
+    kategoriSelect.addEventListener("change", function () {
+      const secilenKategori = this.value;
+      zikirSelect.innerHTML = "<option value=''>-- Zikir Seç --</option>";
+
+      if (secilenKategori && zikirler[secilenKategori]) {
+        zikirler[secilenKategori].forEach(zikir => {
+          const option = document.createElement("option");
+          option.value = zikir;
+          option.textContent = zikir;
+          zikirSelect.appendChild(option);
+        });
+      }
+    });
+
+
+let hedefler = []; // tüm zikirler ve hedefleri saklayacak
+let toplam = 0;
+let count = 0;
+
+
+// Ekle butonu
+document.getElementById("ekleBtn").addEventListener("click", () => {
+  const zikir = zikirSelect.value;
+  const hedef = hedefInput.value;
+
+  if (zikir && hedef) {
+    // listeye ekle
+    const li = document.createElement("li");
+    li.textContent = `${zikir} → ${hedef} adet hedeflendi`;
+    liste.appendChild(li);
+
+
+    // hedefler array'ine ekle
+    hedefler.push({ zikir, hedef: parseInt(hedef), current: 0, li: li});
+    toplam += parseInt(hedef);
+
+    // inputları temizle
+    hedefInput.value = "";
+    zikirSelect.value = "";
+    kategoriSelect.value = "";
+  } else {
+    alert("Lütfen zikir ve hedef sayısını seç!");
+  }
+});
+
+// Başla butonu
+document.getElementById("basla").addEventListener("click", () => {
+  if (hedefler.length === 0) {
+    alert("Lütfen en az bir zikir ekleyin!");
+    return;
+  }
+
+  step2.style.display = "none";
+  step3.style.display = "block";
+  step3.classList.add("active");
+});
+
+
+arttir.addEventListener("click", () => {
+  for (let h of hedefler) {
+    if (h.current < h.hedef) {
+      h.current++;
+      count++;
+      
+      arttir.textContent = count;
+
+      if (h.current >= h.hedef) {
+        h.li.textContent = `${h.zikir} ${h.hedef} adet tamamlandı!`;
+        arttir.style.backgroundColor = "#cdcaff";
+      }
+      break; // her tıklamada sadece bir zikir artar
+    }
+  }
+});
+
+
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('sw.js').then(reg => {
+      console.log('Service Worker kayıtlı:', reg.scope);
+    }).catch(err => {
+      console.log('Service Worker kaydı başarısız:', err);
+    });
+  });
+}
+
+
+</script>
+</body>
+</html>

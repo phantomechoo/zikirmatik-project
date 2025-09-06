@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Zikir Planı</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; }
+    select, input, button { margin: 10px; padding: 8px; }
+    ul { margin-top: 20px; }
+    li { margin: 5px 0; }
+  </style>
+</head>
+<body>
+
+  <h2>Bugünkü Zikir Planı ✨</h2>
+
+  <!-- Kategori dropdown -->
+  <label for="zikirKategori">Kategori Seç:</label>
+  <select id="zikirKategori">
+    <option value="">-- Kategori Seç --</option>
+    <option value="salavat">Salavatlar</option>
+    <option value="tesbihat">Tesbihat</option>
+    <option value="esma">Esmaü’l Hüsna</option>
+    <option value="sure">Sureler</option>
+    <option value="dua">Dualar</option>
+  </select>
+
+  <!-- Zikir dropdown -->
+  <label for="zikirSec">Zikir Seç:</label>
+  <select id="zikirSec">
+    <option value="">-- Önce kategori seç --</option>
+  </select>
+
+  <!-- Hedef sayısı -->
+  <label for="hedef">Hedef:</label>
+  <input type="number" id="hedef" placeholder="örn. 1000">
+
+  <!-- Ekle butonu -->
+  <button id="ekleBtn">Ekle</button>
+
+  <!-- Liste -->
+  <h3>Bugünkü Hedefler:</h3>
+  <ul id="liste"></ul>
+
+  <script>
+    // Zikir kategorileri
+    const zikirler = {
+      salavat: ["Salavat-ı Şerife", "Salavat-ı İbrahimiyye"],
+      tesbihat: [
+        "Subhanallah",
+        "Elhamdülillah",
+        "Allahu Ekber",
+        "La ilahe illallah",
+        "La havle ve la kuvvete illa billah"
+      ],
+      esma: ["Ya Rahman", "Ya Şafi", "Ya Rezzak", "Ya Latif", "Ya Vedud", "Ya Nur"],
+      sure: ["Fatiha", "İhlas", "Felak", "Nas", "Ayetel Kürsi"],
+      dua: [
+        "Estağfirullah",
+        "Hasbiyallahu la ilahe illa Hu",
+        "Bismillahirrahmanirrahim",
+        "Sübhanallahi ve bihamdihi Sübhanallahil azim"
+      ]
+    };
+
+    const kategoriSelect = document.getElementById("zikirKategori");
+    const zikirSelect = document.getElementById("zikirSec");
+    const hedefInput = document.getElementById("hedef");
+    const ekleBtn = document.getElementById("ekleBtn");
+    const liste = document.getElementById("liste");
+
+    // Kategori seçilince zikiri doldur
+    kategoriSelect.addEventListener("change", function () {
+      const secilenKategori = this.value;
+      zikirSelect.innerHTML = "<option value=''>-- Zikir Seç --</option>";
+
+      if (secilenKategori && zikirler[secilenKategori]) {
+        zikirler[secilenKategori].forEach(zikir => {
+          const option = document.createElement("option");
+          option.value = zikir;
+          option.textContent = zikir;
+          zikirSelect.appendChild(option);
+        });
+      }
+    });
+
+    // Ekle butonu
+    ekleBtn.addEventListener("click", () => {
+      const zikir = zikirSelect.value;
+      const hedef = hedefInput.value;
+
+      if (zikir && hedef) {
+        const li = document.createElement("li");
+        li.textContent = `${zikir} → ${hedef} adet hedeflendi`;
+        liste.appendChild(li);
+
+        // input temizle
+        hedefInput.value = "";
+        zikirSelect.value = "";
+        kategoriSelect.value = "";
+      } else {
+        alert("Lütfen zikir ve hedef sayısını seç!");
+      }
+    });
+  </script>
+
+</body>
+</html>
